@@ -20,7 +20,28 @@ cut -c 1-4 state.txt
 echo "delimiter"
 cut -d, -f 1-4 state.txt
 #-f fields
-
-#-n
+cut -f 2 state.txt
 
 #-complement
+cut state.txt -f 1 --complement
+
+
+
+
+echo 
+echo
+echo
+
+echo "awk"
+
+#manipulating data and generating reports.
+#AWK is most often used for processing files. AWK processes a condition if one is provided and then takes an action. The default action is to print whatever meets the criteria of the condition. To search a file for a regular expression pattern match:
+#awk ‘/regex/’ <file>
+
+
+awk '/manager/ {print}' employee.txt 
+
+
+#split line into fields
+awk '{print $1,$4}' employee.txt 
+
